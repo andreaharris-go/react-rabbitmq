@@ -1,0 +1,151 @@
+.page {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 48px 20px;
+  background: linear-gradient(180deg, #f6f7fb 0%, #eef4ff 100%);
+}
+
+.main {
+  display: flex;
+  width: min(100%, 960px);
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero,
+.panel {
+  background: #ffffff;
+  border: 1px solid #dce3f0;
+  border-radius: 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.hero {
+  padding: 32px;
+}
+
+.badge {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #ebf4ff;
+  color: #1d4ed8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin-bottom: 12px;
+  color: #0f172a;
+  font-size: clamp(32px, 6vw, 48px);
+  line-height: 1.1;
+}
+
+.hero p,
+.panelHeader p,
+.meta,
+.emptyState span {
+  color: #475569;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 24px 0;
+}
+
+.panelHeader h2 {
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.messages {
+  padding: 24px;
+}
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.messageItem {
+  border: 1px solid #dce3f0;
+  border-radius: 18px;
+  background: #f8fafc;
+  padding: 16px;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.messageItem pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #1e293b;
+  font: inherit;
+}
+
+.emptyState {
+  display: flex;
+  min-height: 240px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px dashed #bfdbfe;
+  border-radius: 18px;
+  background: #f8fbff;
+  text-align: center;
+}
+
+.emptyState p {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 24px 16px;
+  }
+
+  .hero,
+  .messages,
+  .panelHeader {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .panelHeader,
+  .messageHeader {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .meta {
+    text-align: left;
+  }
+}
